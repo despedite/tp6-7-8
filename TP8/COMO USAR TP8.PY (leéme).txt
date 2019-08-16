@@ -1,0 +1,39 @@
+CÓMO USAR TP8.PY
+
+TP8.PY es un archivo programado en el lenguaje de programación Python el cual podés ingresar el turno, la cantidad de asistencias, los días feriados trabajados en el mes y los días de licencia tomados y, usando variables en el programa, no solo calcula el valor de tu mes en sueldo bruto, neto, los descuentos que recibís (jubilación, dias faltados, obra social, sindicato) y los bonuses (porcentaje bonus, pago por trabajar en feriado, pago por dias de licencia), si no que también guarda esos datos en una conveniente tabla .CSV, lista para visualizar en Excel.
+
+
+** PREPARACIÓN **
+
+Antes de empezar, instale el lenguaje de programación Python, si no lo tiene instalado. Puede hacer eso en https://www.python.org/downloads/, para cualquiera de los múltiples sistemas operativos soportados. Al final de la instalación, no olvide activar la opción de "Asignar Python a PATH".
+Este programa funciona mejor si los datos están anotados en un archivo Excel después de ser calculados, así que tener una hoja Excel a mano es recomendable, aunque no necesario.
+
+
+** ABRIENDO TP8.PY **
+
+Para abrir el archivo rápidamente, puede abrir el archivo TP8.py en el navegador de archivos.
+Sin embargo, se recomienda que haga clic derecho mientras presiona Shift en la carpeta donde está ubicado el archivo TP8.py. Elija la opción "Abrir la ventana de Powershell aquí" o "Abrir la ventana de comandos aquí". En la ventana de comandos, escriba "python TP8.py". 
+Esto le permitirá que pueda ver mensajes de error si el programa deja de funcionar, y presionar ARRIBA después de terminar de ejecutar el programa para usar TP8.py otra vez.
+
+
+** GUARDANDO DATOS **
+
+TP8.py está diseñado para guardar los archivos de una forma rápida y eficiente - solo tenés que escribir 5 datos para sacar todas las cuentas necesarias.
+El programa solicita los siguientes datos:
+
+- el turno en el que el empleado trabaje. "M" para mañana, "T" para tarde, y "N" para noche.
+- las ausencias que el empleado tuvo en el mes. Solo se permiten números enteros.
+- los feriados en el que el empleado trabajó en el mes. Solo se permiten números enteros.
+- los días de licencia que se tomó el empleado en el mes. Solo se permiten números.
+
+Al finalizar la ejecución del programa, se mostrará el resultado final: el bono por horario, el pago por todos los feriados, el pago por los días de licencia tomados, el descuento por faltas, jubilación, obra social y sindicato, el sueldo bruto, los descuentos, y el sueldo neto final.
+Finalmente, el programa va a solicitar el nombre de el empleado. Si no quiere ingresar el nombre y guardar los datos, puede usar la combinación de botones CTRL + C. Si ingresa el nombre, este dato se va a guardar en un archivo .csv para su uso posterior en Excel.
+
+
+** VISUALIZANDO EN EXCEL **
+
+Al finalizar la ejecución, el usuario puede abrir en Excel el archivo .csv usado para revisar el nombre, turno, inasistencias, feriados trabajados, dias de licencia tomados, y los valores finales: el sueldo bruto, los descuentos, y el valor final o neto.
+Este documento no tiene formato (en otras palabras: no está bonito), ya que un archivo .csv no es un archivo de Excel y está diseñado solamente para poder guardar archivos de forma rápida. Un archivo .csv no puede ser estilizado en Excel, sin cambiarlo a .xcls.
+NOTA IMPORTANTE: No tengas abierto tp8.py y tp8.csv (en Excel) al mismo tiempo. Si se hace, el programa no va a poder guardar el archivo .CSV y los valores no serán mostrados.
+
+****** Este programa y archivo .csv fueron desarrollados por Erik Bianco Vera (7mo2da, EEST n4) *****

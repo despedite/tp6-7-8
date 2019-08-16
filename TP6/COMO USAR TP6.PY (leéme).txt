@@ -1,0 +1,109 @@
+CÓMO USAR TP6.PY
+
+TP6.PY es un archivo programado en el lenguaje de programación Python el cual te permite calcular el precio de un producto según su indice de Primero Entrado, Primero Salido, Último Entrado, Primero Salido, y su Valor Promedio Ponderado, utilizando el inventario de los días pasados.
+Este archivo también permite saber el inventario final que va a haber al terminar el día. Para saber cómo llenar tu propio archivo Excel, utilice esta guía.
+
+
+** PREPARACIÓN **
+
+Antes de empezar, instale el lenguaje de programación Python, si no lo tiene instalado. Puede hacer eso en https://www.python.org/downloads/, para cualquiera de los múltiples sistemas operativos soportados. Al final de la instalación, no olvide activar la opción de "Asignar Python a PATH".
+Este programa funciona mejor si los datos están anotados en un archivo Excel después de ser calculados, así que tener una hoja Excel a mano es recomendable, aunque no necesario.
+
+
+** ABRIENDO TP6.PY **
+
+Para abrir el archivo, haga clic derecho mientras presiona Shift en la carpeta donde está ubicado el archivo tp6.py. Elija la opción "Abrir la ventana de Powershell aquí" o "Abrir la ventana de comandos aquí". En la ventana de comandos, escriba "python tp6.py".
+
+
+** CALCULANDO **
+
+Para calcular el PEPS, UEPS y VP a partir de un inventario, se necesita la introducción de datos. Estos datos a introducir son el inventario conseguido, y el precio unitario que valio ese inventario.
+TP6 va a preguntar un máximo de 3 veces esto, y al final de guardar esos datos preguntará cuantos productos se vendieron hoy. Si tenés, por ejemplo, dos días de inventario en vez de tres, introducí 0 en vez de el inventario / CU.
+Ejemplo:
+
+|	(1/7) Introduci la existencia de el dia 1:
+|	200
+|
+|	(2/7) Introduci cuanto te salio el producto el dia 1:
+|	15
+|
+|	(3/7) Introduci la existencia de el dia 2:
+|	180
+|
+|	(4/7) Introduci cuanto te salio el producto el dia 2:
+|	17
+|
+|	(5/7) Introduci la existencia de el dia 3:
+|	0
+|
+|	(6/7) Introduci cuanto te salio el producto el dia 3:
+|	0
+|
+|	(7/7) Introduci cuantos productos salieron hoy:
+|	135
+
+Después de introducir estos datos, el programa arrojará el PEPS, UEPS y VP de la venta de los productos, junto con cuanto inventario va a quedar en cada una de las tres alternativas.
+Ejemplo:
+
+|	PEPS: 135u X 15.0$
+|	UEPS: 135u X 17.0$
+|	VP: 135u X 15.947368421052632$
+|
+|	Tu nueva existencia es:
+|
+|	PEPS: Dia 1 - 65u Dia 2 - 180u Dia 3 - 0u
+|	UEPS: Dia 1 - 200u Dia 2 - 45u Dia 3 - 0u
+|	VP: 245u
+
+
+** UNIVERSOS PARALELOS **
+
+Que el programa arroje el inventario final que vas a tener es importante, porque cada inventario influye en como vas a vender el próximo día. Es recomendado que anotes o en Excel, o en una hoja, cual es el inventario de el día, tanto si es un inventario resultado de una suma PEPS, UEPS o VP, ya que en el día siguiente el precio de venta va a depender de el inventario final del día anterior.
+Ejemplo (universo paralelo PEPS, dia siguiente):
+
+|	(1/7) Introduci la existencia de el dia 1:
+|	65                                                  (INVENTARIO DEL DIA ANTEROR)
+|
+|	(2/7) Introduci cuanto te salio el producto el dia 1:
+|	15
+|
+|	(3/7) Introduci la existencia de el dia 2:
+|	180                                                 (INVENTARIO DEL DIA ANTEROR)
+|
+|	(4/7) Introduci cuanto te salio el producto el dia 2:
+|	17
+|
+|	(5/7) Introduci la existencia de el dia 3:
+|	24                                                  (NUEVO INVENTARIO DE HOY)
+|
+|	(6/7) Introduci cuanto te salio el producto el dia 3:
+|	19
+|
+|	(7/7) Introduci cuantos productos salieron hoy:
+|	215
+
+Esto también tiene que volver a ser ejecutado para UEPS y VP.
+Ejemplo (universo paralelo UEPS, dia siguiente):
+
+|	(1/7) Introduci la existencia de el dia 1:
+|	200                                                 (INVENTARIO DEL DIA ANTEROR)
+|
+|	(2/7) Introduci cuanto te salio el producto el dia 1:
+|	15
+|
+|	(3/7) Introduci la existencia de el dia 2:
+|	45                                                  (INVENTARIO DEL DIA ANTEROR)
+|
+|	(4/7) Introduci cuanto te salio el producto el dia 2:
+|	17
+|
+|	(5/7) Introduci la existencia de el dia 3:
+|	24                                                  (NUEVO INVENTARIO DE HOY)
+|
+|	(6/7) Introduci cuanto te salio el producto el dia 3:
+|	19
+|
+|	(7/7) Introduci cuantos productos salieron hoy:
+|	215
+
+****** Este programa y archivo Excel fueron desarrollados por Erik Bianco Vera (7mo2da, EEST n4) ******
